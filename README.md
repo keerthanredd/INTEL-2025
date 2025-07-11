@@ -12,43 +12,4 @@ Deep Learning (CNNs, Training/Evaluation)
 
 Image Quality Metrics (SSIM, PSNR)
 
-	Approach
-We use a Teacher–Student Knowledge Distillation framework:
-
-Teacher Model:
-Pre-trained SwinIR (Image Restoration Transformer) for high-fidelity outputs.
-
-Student Model:
-A lightweight CNN-based model designed to mimic the teacher’s performance with lower latency and computational cost.
-
-	System Requirements
-Feature	Specification
-Target FPS	30–60+ FPS
-Resolution	Supports 1920×1080 (Full HD)
-Accuracy Metric	SSIM > 90%
-Latency	Low (Real-time Inference)
-Hardware	Edge/low-resource devices compatible
-
-	Training Setup
-Dataset: High-resolution images ( DIV2K)
-
-Data Simulation:
-
-Downscale → Blur → Upscale (Bicubic/Bilinear)
-
-Simulates compression artifacts from poor video connections.
-
-Input: Simulated low-quality images
-
-Ground Truth: Original high-resolution images
-
-Loss Functions:
-
-L1 Loss
-
-Perceptual Loss
-
-SSIM Loss
-
-Distillation Loss (between teacher and student outputs)
 

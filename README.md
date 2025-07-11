@@ -1,9 +1,9 @@
 Image Sharpening using Knowledge Distillation
 
-🎯 Objective
+	Objective
 Develop a lightweight deep learning model to enhance image sharpness in real-time video conferencing scenarios, particularly addressing visual degradation due to low bandwidth or poor network conditions.
 
-📚 Prerequisites
+	Prerequisites
 Machine Learning Concepts
 
 Python Programming
@@ -12,7 +12,7 @@ Deep Learning (CNNs, Training/Evaluation)
 
 Image Quality Metrics (SSIM, PSNR)
 
-🧪 Approach
+	Approach
 We use a Teacher–Student Knowledge Distillation framework:
 
 Teacher Model:
@@ -21,7 +21,7 @@ Pre-trained SwinIR (Image Restoration Transformer) for high-fidelity outputs.
 Student Model:
 A lightweight CNN-based model designed to mimic the teacher’s performance with lower latency and computational cost.
 
-⚙️ System Requirements
+	System Requirements
 Feature	Specification
 Target FPS	30–60+ FPS
 Resolution	Supports 1920×1080 (Full HD)
@@ -29,8 +29,8 @@ Accuracy Metric	SSIM > 90%
 Latency	Low (Real-time Inference)
 Hardware	Edge/low-resource devices compatible
 
-🧑‍💻 Training Setup
-Dataset: High-resolution images (e.g., DIV2K, BSD500)
+	Training Setup
+Dataset: High-resolution images ( DIV2K)
 
 Data Simulation:
 
@@ -52,11 +52,3 @@ SSIM Loss
 
 Distillation Loss (between teacher and student outputs)
 
-🧪 Evaluation
-Objective Metrics:
-
-SSIM (Structural Similarity Index)
-
-PSNR (Peak Signal-to-Noise Ratio)
-
-Inference Time (in ms)
